@@ -6,8 +6,8 @@ def custom_write(file_name, strings):
         tell = (file.tell())
         s += 1
         file.write(f'{i}\n')
+        strings_positions.update({(s, tell): i})
     file.close()
-    strings_positions.update({(s, tell) : i})
     return strings_positions
 
 info = [
